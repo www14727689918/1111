@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <!--2.viewport-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <!--3.x-ua-compatible-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="images/favicon.ico"/>
+    <!--4.引入两个兼容文件-->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        @media screen and (min-width:768px) and (max-width:991px){
+            #main {
+                padding-left:0;
+            }
+            #main .box{
+                margin: 5em auto;
+            }
+        }
+        @media screen and (max-width:767px){
+            #main {
+                padding:0;
+            }
+            #main .box{
+                width:300px;
+                margin: 5em auto;
+            }
+            #main img{
+                width:100%;
+                height:500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="main">
+        <div class="top">
+            <a href="index.html"></a>
+            <span>凤铭坊</span>
+        </div>
+        <img src="img/bg.jpg">
+        <div class="box">
+            <form class="form-horizontal">
+                <div class="form-group has-feedback">
+                    <div class="col-sm-5 col-sm-offset-1 col-xs-12">
+                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                        <input class="form-control" id="uname" placeholder="用户名">
+                    </div>
+                    <div class="col-sm-5 col-xs-12">
+                        <span class="help-block">用户名可以包含数字或字母</span>
+                    </div>
+                </div>
+                <div class="form-group has-feedback">
+                    <div class="col-sm-5 col-sm-offset-1 col-xs-12">
+                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                        <input class="form-control" id="upwd" placeholder="密码" type="password">
+                    </div>
+                    <div class="col-sm-5 col-xs-12">
+                        <span class="help-block">密码长度在6~12位之间</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-5 col-sm-offset-1 col-xs-12">
+                        <input id="bt-login" class="btn btn-success btn-block" type="button" value="登录">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3 col-sm-offset-1 col-xs-8">
+                        <a href="register.html">没账号？去注册>></a>
+                    </div>
+                    <div class="col-sm-2 col-xs-4">
+                        <a href="#">忘记密码</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>    
+
+    <!--5.引入 jquery,bootstrap js-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--引入 bootlint.js 检查各式错误-->
+    <script src="js/bootlint.js"></script>
+    <script>
+        $('#bt-login').click(function () {
+            var n = $('#uname').val();
+            var p = $('#upwd').val();
+            $.ajax({
+                type: 'POST',
+                url: '/login',
+                data: {uname: n, upwd: p},
+                success: function(result){
+                    console.log('获取到服务器返回的响应数据');
+                    console.log(result);
+                    if(result.code===1){
+                        alert('登录成功！3s后自动跳转到首页');
+                        sessionStorage['loginUname'] = n;
+                        sessionStorage['loginUid'] = result.uid;
+                        location.href = 'index.html';
+                    }else {
+                        alert('登录失败！原因：'+result.msg);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

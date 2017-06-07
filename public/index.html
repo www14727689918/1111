@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="images/favicon.ico"/>
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <script src="http://api.map.baidu.com/getscript?v=2.0&ak=Ezh58qTgH3wyRPGPnmTeGNifxoAbdIwa">
+  </script>
+  <style>
+    @media screen and (min-width:768px) and (max-width:991px){
+      #main div.half-mask{
+        padding:0;
+        position: absolute;
+        top:75%;
+        left:0;
+      }
+      #main div.half-mask>p{
+        font-size: 1rem;
+      }
+    }
+    @media screen and (max-width:767px){
+      #nav a.navbar-brand {
+        width: 45px;
+        height: 45px;
+        background: url(images/small_logo.png) no-repeat -10px -3px;
+      }
+      #nav button.dropdown-toggle{
+        margin-top:5px;
+      }
+      #carl{
+        position: relative;
+        top:-70px;
+        left:0;
+      }
+      #carl div.carousel-caption{
+        display: none;
+      }
+      #main div.pic>ul>li{
+        padding:0;
+      }
+      #main div.half-mask{
+        display:none;
+      }
+      #gotoTop{
+        left:88%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <header id="top">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2 col-xs-4">
+            <a href="register.html" target="_blank">注册</a>
+            <a href="login.html" target="_blank">登录</a>
+          </div>
+          <div class="col-lg-2 col-lg-offset-6 col-md-offset-4 col-sm-3 col-sm-offset-4 col-xs-7 col-xs-offset-1">
+            <video id="bg" src="video/bg.mp3" height="15" width="15" loop autoplay>您的浏览器不支持VIDEO标签！</video>
+            <button type="button" class="ctrl">
+              <img src="images/pause.jpg">
+            </button>
+            <a href="#" class="weibo"></a>
+            <a href="#" class="weixin"></a>
+            <a href="#"></a>
+          </div>
+          <div class="col-lg-2 col-sm-3 hidden-xs">
+            <span>凤铭坊古装摄影</span>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <nav id="nav" class="navbar">
+    <div class="container">
+      <div class="row">
+        <div class="navbar-header col-xs-1">
+          <a href="index.html" class="navbar-brand"></a>
+        </div>
+        <div class="dropdown hidden-lg hidden-md hidden-sm col-xs-1">
+          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="index.html">首页</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">关于</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">作品</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="case.html">客片</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">动态</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">服务</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="order.html">预约</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="message.html">留言</a>
+            </li>
+          </ul>
+        </div>
+        <div class="hidden-xs col-sm-11">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="index.html">首页<br>HOME</a>
+            </li>
+            <li>
+              <a href="#">关于<br>ABOUT</a>
+            </li>
+            <li>
+              <a href="#">作品<br>WORKS</a>
+            </li>
+            <li>
+              <a href="case.html">客片<br>CASE</a>
+            </li>
+            <li>
+              <a href="#">动态<br>NEWS</a>
+            </li>
+            <li>
+              <a href="#">服务<br>SERVE</a>
+            </li>
+            <li>
+              <a href="order.html">预约<br>ORDER</a>
+            </li>
+            <li>
+              <a href="message.html">留言<br>MESSAGE</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="carl" class="carousel slide" data-ride="carousel" data-interval="2000">
+    <div class="carousel-inner">
+      <div class="item active">
+        <a href="active.html">
+          <img src="img/carl_00.png"/>
+        </a>
+      </div>
+      <div class="item">
+        <img src="img/carl_02.jpg"/>
+        <div class="carousel-caption">
+          <p>谁的眉心被画出江山的模样，谁的之间被梦图上娇羞浓妆。<br>月如水花似火映出一片晴朗，谁的青春不曾有潦草迷茫。</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="img/carl_04.jpg"/>
+        <div class="carousel-caption">
+          <p>在世如莲，净心素雅，不污不垢，淡看浮华。</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="img/carl_06.jpg"/>
+        <div class="carousel-caption">
+          <h4>死生一笑为君王</h4>
+        </div>
+      </div>
+    </div>
+    <!--左右方向-->
+    <a href="#carl" class="carousel-control left" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a href="#carl" class="carousel-control right" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+    <!--增加导航圆点-->
+    <ul class="carousel-indicators">
+      <li class="active" data-target="#carl" data-slide-to="0"></li>
+      <li data-target="#carl" data-slide-to="1"></li>
+      <li data-target="#carl" data-slide-to="2"></li>
+      <li data-target="#carl" data-slide-to="3"></li>
+    </ul>
+  </div>
+  <section id="main">
+    <div id="works" class="container">
+      <div class="title">
+        <span><a>作品展示</a><i>WORKS</i></span>
+      </div>
+      <div class="pic">
+        <ul>
+          <li>
+            <img src="img/works_01.jpeg" class="img-responsive">
+            <div class="half-mask">
+              <h3>2017春秋新品</h3>
+              <p>
+                岁月静好，很想我们就这样安然老去，不紧不慢，不慌不忙。
+              </p>
+              <a href="#">了解更多</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/works_02.jpg" class="img-responsive">
+            <div class="half-mask">
+              <h3>2017开春新品</h3>
+              <p>
+                汉霄苍茫，牵住繁华哀伤，弯眉间，命中注定，成为过往。
+              </p>
+              <a href="#">了解更多</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/works_03.jpg" class="img-responsive">
+            <div class="half-mask">
+              <h3>2016年经典</h3>
+              <p>
+                凡音之起,由人心生也,人心之动,物使之然也,感于物而动,故形于声。
+              </p>
+              <a href="#">了解更多</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/works_04.jpg" class="img-responsive">
+            <div class="half-mask">
+              <h3>2017年新品</h3>
+              <p>
+                千秋功名，一世葬你，玲珑社稷，可笑却无君王命。
+              </p>
+              <a href="#">了解更多</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/works_05.jpg" class="img-responsive">
+            <div class="half-mask">
+              <h3>2017年5月新品</h3>
+              <p>
+                嗟叹红颜泪、英雄殁，人世苦多。山河永寂、怎堪欢颜。
+              </p>
+              <a href="#">了解更多</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/works_06.jpg" class="img-responsive">
+            <div class="half-mask">
+              <h3>2016寒假新品</h3>
+              <p>
+                那些繁华哀伤终成过往，请不要失望，平凡是为了最美的荡气回肠。
+              </p>
+              <a href="#">了解更多</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/works_07.jpeg" class="img-responsive">
+            <div class="half-mask">
+              <h3>2017闺蜜新品</h3>
+              <p>
+                你是比情人更重要，即使你只是我生命拼图的一小块，但是没有你，我的生命便不会完整。
+              </p>
+              <a href="#">了解更多</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/works_08.jpg" class="img-responsive">
+            <div class="half-mask">
+              <h3>2017夏季新品</h3>
+              <p style="text-align: center;">
+                腕弱复低举，<br/>身轻由回纵。<br/>可谓写自欢，<br/>方与心期共。
+              </p>
+              <a href="#">了解更多</a>
+            </div>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div id="case" class="container">
+      <div class="title">
+        <span><a>客片欣赏</a><i>SHOW CASE</i></span>
+      </div>
+      <div class="pic">
+        <ul>
+          <li>
+            <img src="img/case_01.jpg">
+          </li>
+          <li>
+            <img src="img/case_02.jpg">
+          </li>
+          <li>
+            <img src="img/case_03.jpg">
+          </li>
+          <li>
+            <img src="img/case_04.jpg">
+          </li>
+          <li>
+            <img src="img/case_05.jpg">
+          </li>
+          <li>
+            <img src="img/case_06.jpg">
+          </li>
+          <li>
+            <img src="img/case_07.jpg">
+          </li>
+          <li>
+            <img src="img/case_08.jpg">
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div id="news" class="container">
+      <div class="title">
+        <span><a>最新动态</a><i>NEWS & ACTIVES</i></span>
+      </div>
+      <div class="pic">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <svg width="300" height="200">
+                      <rect width="300" height="200" x="0" y="0" fill="#F7CBA2"></rect>
+                      <rect width="200" height="200" x="0" y="0" fill="#EAA76A"></rect>
+                      <text font-family="华文中宋" font-size="14em" alignment-baseline="before-edge" x="200" y="0" fill="#EAA76A">A</text>
+                      <text alignment-baseline="before-edge" x="20" y="30" fill="#fff">FAVOURABLE ACTIVITY</text>
+                      <text alignment-baseline="before-edge" x="120" y="60" fill="#fff">热门新闻</text>
+                      <text alignment-baseline="before-edge" x="45" y="73" fill="#fff" font-size="8em">01</text>
+                    </svg>
+                  </div>
+                  <div class="back">
+                    <h4>最新资讯</h4><a href="#">更多>>></a>
+                    <div>
+                      <a href="active.html">☞ 黄金约拍季——抄底折扣，遇“五”不候</a><br/>
+                      <a href="#">☞ 三月女神季——约惠而至，你的古装梦</a><br/>
+                      <a href="#">☞ 梦回春秋时——情深意“粽”，粽粽有赏</a><br/>
+                      <a href="#">☞ 你是否达标——古代美女的十大标准</a><br/>
+                      <a href="#">☞ 内衣的历史——古代女子肚兜的秘密</a><br/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <svg width="300" height="200">
+                      <rect width="300" height="200" x="0" y="0" fill="#D2F2F1"></rect>
+                      <rect width="200" height="200" x="0" y="0" fill="#AAF0EA"></rect>
+                      <text font-family="华文中宋" font-size="14em" alignment-baseline="before-edge" x="193" y="0" fill="#AAF0EA">B</text>
+                      <text alignment-baseline="before-edge" x="105" y="30" fill="#fff">ABOUT US</text>
+                      <text alignment-baseline="before-edge" x="120" y="60" fill="#fff">关于我们</text>
+                      <text alignment-baseline="before-edge" x="45" y="73" fill="#fff" font-size="8em">02</text>
+                    </svg>
+                  </div>
+                  <div class="back">
+                    <h4>凤铭坊古装摄影</h4><a href="#">更多>>></a>
+                    <div>
+                      <a style="display: block; text-align: center;">
+                        曾忆离殇风雨柔，<br/>乱红蹁跹染凝眸。<br/>半抹残阳半声叹，<br/>几许相思几多愁。
+                      </a>
+                      <a> &nbsp; &nbsp; &nbsp; &nbsp; 你是否曾想过一脚踏入历史，转眼成了‘古人’的感觉。</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3 col-xs-12">
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front">
+                    <svg width="300" height="200">
+                      <rect width="300" height="200" x="0" y="0" fill="#8EA8E0"></rect>
+                      <rect width="200" height="200" x="0" y="0" fill="#6286DB"></rect>
+                      <text font-family="华文中宋" font-size="14em" alignment-baseline="before-edge" x="190" y="0" fill="#6286DB">C</text>
+                      <text alignment-baseline="before-edge" x="1" y="30" fill="#fff">FREQUENTLY QUESTIONS</text>
+                      <text alignment-baseline="before-edge" x="120" y="60" fill="#fff">常见问题</text>
+                      <text alignment-baseline="before-edge" x="45" y="73" fill="#fff" font-size="8em">03</text>
+                    </svg>
+                  </div>
+                  <div class="back">
+                    <h4>常见问题</h4><a href="#">更多>>></a>
+                    <div style="text-align: center">
+                      <a href="#">✎ 拍照需要提前多久约定呢？</a><br/>
+                      <a href="#">✎ 摄影师化妆师可以指定吗？</a><br/>
+                      <a href="#">✎ 造型是可以自己选择的吗？</a><br/>
+                      <a href="#">✎ 摄影当天可以自己化妆吗？</a><br/>
+                      <a href="#">✎ 拍好之后多久可以看照片？</a><br/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contant" class="container">
+      <div class="title">
+        <span><a>联系我们</a><i>CONTANT</i></span>
+      </div>
+      <div class="pic" id="map"></div>
+    </div>
+  </section>
+  <footer id="foot-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-2 hidden-xs">
+          <img src="images/logo.jpg">
+          <p>@ STAR LOGO</p>
+        </div>
+        <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-3">
+          <img src="images/weixin.jpg">
+          <p>@ STAR WEIXIN</p>
+        </div>
+        <div class="col-md-2 col-sm-6 hidden-xs">
+          <ul>
+            <li class="first">HOME</li>
+            <li>
+              <a href="#">关于我们<br>ABOUT</a>
+            </li>
+            <li>
+              <a href="#">联系我们<br>CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-6 hidden-xs">
+          <ul>
+            <li class="first">SERVICE</li>
+            <li class="position">
+              <a href="#">服务套系<br>LOCAL</a>
+              <span class="badge">look</span>
+            </li>
+            <li>
+              <a href="#">在线预约<br>WEDDING</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-6 hidden-xs">
+          <ul>
+            <li class="first">SHOWCASE</li>
+            <li>
+              <a href="#">热拍主题<br>HOT THEME</a>
+            </li>
+            <li>
+              <a href="#">客片欣赏<br>SHOW CASE</a>
+            </li>
+            <li>
+              <a href="#">礼服与饰品<br>COSTUME</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-6 hidden-xs">
+          <ul>
+            <li class="first">NEWS</li>
+            <li>
+              <a href="#">热门活动<br>EVENTS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-md-offset-0 col-sm-5 col-sm-offset-2 col-xs-12">
+          <span>
+            <u></u>0576-88881019
+          </span>
+        </div>
+        <div class="col-lg-2 col-sm-3 hidden-xs">
+          <p>
+            <a href="#"></a>
+            <a href="#" class="weixin"></a>
+            <a href="#" class="weibo"></a>
+          </p>
+        </div>
+        <div class="col-lg-7 col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-2 col-xs-12">
+          <span>
+            <a href="#"></a>
+            <b>联系地址：台州市椒江区中山西路银河商城中段西侧</b>
+            <p>联系ＱＱ： 1175923789</p>
+          </span>
+        </div>
+        <div class="col-sm-8 col-sm-offset-2 hidden-xs">
+          <span>版权所有&copy;2017-2117 作者：Yly</span>&nbsp;&nbsp;&nbsp;
+          <span>All Rights Reserved</span>&nbsp;
+          <span>此网站的内容真实性及赢利运行由 作者 负责 未经允许不得转载抄袭</span>&nbsp;
+          <span>网站备案号：ＸICP备110XXXXX号</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#top" id="gotoTop" class="glyphicon glyphicon-menu-up"></a>
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootlint.js"></script>
+  <script>
+
+    var map = new BMap.Map("map"); // 创建地图实例
+    var point = new BMap.Point(121.440153,28.682314);// 创建点坐标
+    map.centerAndZoom(point, 19);
+    // 初始化地图，设置中心点坐标和地图级别
+    //添加地图上的覆盖物——标记
+    var mk = new BMap.Marker(point);
+    mk.setAnimation(BMAP_ANIMATION_BOUNCE);
+    map.addOverlay(mk);
+    //启用滚轮缩放
+    map.enableScrollWheelZoom(true);
+    //添加导航控件
+    map.addControl(new BMap.NavigationControl());
+    //添加缩放控件
+    map.addControl(new BMap.ScaleControl());
+    //添加概览图控件
+    map.addControl(new BMap.OverviewMapControl());
+    //添加地图类型控件
+    map.addControl(new BMap.MapTypeControl());
+  </script>
+  <script>
+    var ctrl=document.querySelector('.ctrl');
+    var ctrlImg = document.querySelector('.ctrl img');
+    ctrl.onclick = function(e){
+      e.preventDefault();
+      if(bg.paused){  //当前处于暂停状态
+        bg.play();  //播放视频
+        ctrlImg.src = 'images/pause.jpg';
+      }else {   //当前处于播放状态
+        bg.pause(); //暂停播放
+        ctrlImg.src = 'images/play.jpg';
+      }
+    };
+
+    function gotoTop(min_height){
+      $("#gotoTop").click(
+        function(){$('html,body').animate({scrollTop:0},1000);
+        }).hover(
+        function(){$(this).addClass("hover");},
+        function(){$(this).removeClass("hover");
+        });
+      min_height ? min_height = min_height : min_height = 600;
+      $(window).scroll(function(){
+        var s = $(window).scrollTop();
+        if( s > min_height){
+          $("#gotoTop").fadeIn(100);
+        }else{
+          $("#gotoTop").fadeOut(200);
+        }
+      });
+    }
+    gotoTop();
+  </script>
+</body>
+</html>

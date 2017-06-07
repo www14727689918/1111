@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+  <meta charset="UTF-8">
+  <!--2.viewport-->
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <!--3.x-ua-compatible-->
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="css/message.css">
+  <link rel="icon" href="images/favicon.ico"/>
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    @media screen and (max-width:767px){
+      #nav a.navbar-brand {
+        width: 45px;
+        height: 45px;
+        background: url(images/small_logo.png) no-repeat -10px -3px;
+      }
+      #nav button.dropdown-toggle{
+        margin-top:5px;
+      }
+      #slide{
+        position: relative;
+        top:-70px;
+        left:0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <header id="top">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2 col-xs-4">
+            <a href="register.html" target="_blank">注册</a>
+            <a href="login.html" target="_blank">登录</a>
+          </div>
+          <div class="col-lg-2 col-lg-offset-6 col-md-offset-4 col-sm-3 col-sm-offset-4 col-xs-7 col-xs-offset-1">
+            <video id="bg" src="video/bg.mp3" height="15" width="15" loop autoplay>您的浏览器不支持VIDEO标签！</video>
+            <button type="button" class="ctrl">
+              <img src="images/pause.jpg">
+            </button>
+            <a href="#" class="weibo"></a>
+            <a href="#" class="weixin"></a>
+            <a href="#"></a>
+          </div>
+          <div class="col-lg-2 col-sm-3 hidden-xs">
+            <span>凤铭坊古装摄影</span>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <nav id="nav" class="navbar">
+    <div class="container">
+      <div class="row">
+        <div class="navbar-header col-xs-1">
+          <a href="index.html" class="navbar-brand"></a>
+        </div>
+        <div class="dropdown hidden-lg hidden-md hidden-sm col-xs-1">
+          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="index.html">首页</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">关于</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">作品</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">客片</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">动态</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">服务</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">预约</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">联系</a>
+            </li>
+          </ul>
+        </div>
+        <div class="hidden-xs col-sm-11">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="index.html">首页<br>HOME</a>
+            </li>
+            <li>
+              <a href="#">关于<br>ABOUT</a>
+            </li>
+            <li>
+              <a href="#">作品<br>WORKS</a>
+            </li>
+            <li>
+              <a href="#">客片<br>CASE</a>
+            </li>
+            <li>
+              <a href="#">动态<br>NEWS</a>
+            </li>
+            <li>
+              <a href="#">服务<br>SERVE</a>
+            </li>
+            <li>
+              <a href="#">预约<br>ORDER</a>
+            </li>
+            <li>
+              <a href="#">联系<br>CONTANT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="slide">
+    <ul>
+      <li>
+        <img src="img/carl_01.png" class="img-responsive">
+      </li>
+      <li>
+        <img src="img/carl_03.jpg" class="img-responsive">
+      </li>
+      <li>
+        <img src="img/carl_07.jpg" class="img-responsive">
+      </li>
+      <li>
+        <img src="img/carl_05.jpg" class="img-responsive">
+      </li>
+    </ul>
+    <div id="ico" class="ico">
+      <a class="active" href="javascript:void(0);"></a>
+      <a href="javascript:void(0);"></a>
+      <a href="javascript:void(0);"></a>
+      <a href="javascript:void(0);"></a>
+    </div>
+  </div>
+  <div id="main">
+    <div class="title">
+      <span><a>留言板 </a><i> message</i></span>
+    </div>
+    <ul class="msgUl">
+      <!--<li>-->
+        <!--<img src="img/bai_00.png"/>-->
+        <!--<div class="msg">-->
+          <!--<img src="img/tou_01.jpg"/>-->
+          <!--<p>-->
+            <!--用户名：XXXXXXXXX-->
+            <!--<br/>-->
+            <!--<span style="display: inline-block; margin-top:10px;">时间：XXX</span>-->
+          <!--</p>-->
+          <!--<div>-->
+            <!--评论内容：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam asperiores atque beatae, debitis distinctio fuga id minima minus mollitia nobis pariatur quasi, qui quod soluta? Beatae commodi quos repellendus.-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</li>-->
+      <!--<li>
+        <img src="img/bai_00.png"/>
+        <div class="msg">
+          <img src="img/tou_01.jpg"/>
+          <p>
+            用户名：XXXXXXXXX
+            <br/>
+            <span style="display: inline-block; margin-top:10px;">时间：XXX</span>
+          </p>
+          <div>
+            评论内容：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam asperiores atque beatae, debitis distinctio fuga id minima minus mollitia nobis pariatur quasi, qui quod soluta? Beatae commodi quos repellendus.
+          </div>
+        </div>
+      </li>
+      <li>
+        <img src="img/bai_00.png"/>
+        <div class="msg">
+          <img src="img/tou_01.jpg"/>
+          <p>
+            用户名：XXXXXXXXX
+            <br/>
+            <span style="display: inline-block; margin-top:10px;">时间：XXX</span>
+          </p>
+          <div>
+            评论内容：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam asperiores atque beatae, debitis distinctio fuga id minima minus mollitia nobis pariatur quasi, qui quod soluta? Beatae commodi quos repellendus.
+          </div>
+        </div>
+      </li>
+      <li>
+        <img src="img/bai_00.png"/>
+        <div class="msg">
+          <img src="img/tou_01.jpg"/>
+          <p>
+            用户名：XXXXXXXXX
+            <br/>
+            <span style="display: inline-block; margin-top:10px;">时间：XXX</span>
+          </p>
+          <div>
+            评论内容：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam asperiores atque beatae, debitis distinctio fuga id minima minus mollitia nobis pariatur quasi, qui quod soluta? Beatae commodi quos repellendus.
+          </div>
+        </div>
+      </li>
+      <li>
+        <img src="img/bai_00.png"/>
+        <div class="msg">
+          <img src="img/tou_01.jpg"/>
+          <p>
+            用户名：XXXXXXXXX
+            <br/>
+            <span style="display: inline-block; margin-top:10px;">时间：XXX</span>
+          </p>
+          <div>
+            评论内容：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam asperiores atque beatae, debitis distinctio fuga id minima minus mollitia nobis pariatur quasi, qui quod soluta? Beatae commodi quos repellendus.
+          </div>
+        </div>
+      </li>
+      <li>
+        <img src="img/bai_00.png"/>
+        <div class="msg">
+          <img src="img/tou_01.jpg"/>
+          <p>
+            用户名：XXXXXXXXX
+            <br/>
+            <span style="display: inline-block; margin-top:10px;">时间：XXX</span>
+          </p>
+          <div>
+            评论内容：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam asperiores atque beatae, debitis distinctio fuga id minima minus mollitia nobis pariatur quasi, qui quod soluta? Beatae commodi quos repellendus.
+          </div>
+        </div>
+      </li>-->
+    </ul>
+  </div>
+  <footer id="foot-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-2 hidden-xs">
+          <img src="images/logo.jpg">
+          <p>@ STAR LOGO</p>
+        </div>
+        <div class="col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-3">
+          <img src="images/weixin.jpg">
+          <p>@ STAR WEIXIN</p>
+        </div>
+        <div class="col-md-2 col-sm-6 hidden-xs">
+          <ul>
+            <li class="first">HOME</li>
+            <li>
+              <a href="#">关于我们<br>ABOUT</a>
+            </li>
+            <li>
+              <a href="#">联系我们<br>CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-6 hidden-xs">
+          <ul>
+            <li class="first">SERVICE</li>
+            <li class="position">
+              <a href="#">服务套系<br>LOCAL</a>
+              <span class="badge">look</span>
+            </li>
+            <li>
+              <a href="#">在线预约<br>WEDDING</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-6 hidden-xs">
+          <ul>
+            <li class="first">SHOWCASE</li>
+            <li>
+              <a href="#">热拍主题<br>HOT THEME</a>
+            </li>
+            <li>
+              <a href="#">客片欣赏<br>SHOW CASE</a>
+            </li>
+            <li>
+              <a href="#">礼服与饰品<br>COSTUME</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-6 hidden-xs">
+          <ul>
+            <li class="first">NEWS</li>
+            <li>
+              <a href="#">热门活动<br>EVENTS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-md-offset-0 col-sm-5 col-sm-offset-2 col-xs-12">
+          <span>
+            <u></u>0576-88881019
+          </span>
+        </div>
+        <div class="col-lg-2 col-sm-3 hidden-xs">
+          <p>
+            <a href="#"></a>
+            <a href="#" class="weixin"></a>
+            <a href="#" class="weibo"></a>
+          </p>
+        </div>
+        <div class="col-lg-7 col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-2 col-xs-12">
+          <span>
+            <a href="#"></a>
+            <b>联系地址：台州市椒江区中山西路银河商城中段西侧</b>
+            <p>联系ＱＱ： 1175923789</p>
+          </span>
+        </div>
+        <div class="col-sm-8 col-sm-offset-2 hidden-xs">
+          <span>版权所有&copy;2017-2117 作者：Yly</span>&nbsp;&nbsp;&nbsp;
+          <span>All Rights Reserved</span>&nbsp;
+          <span>此网站的内容真实性及赢利运行由 作者 负责 未经允许不得转载抄袭</span>&nbsp;
+          <span>网站备案号：ＸICP备110XXXXX号</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!--引入 jquery,bootstrap js-->
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/message.js"></script>
+<!--引入 bootlint.js 检查各式错误-->
+<script src="js/bootlint.js"></script>
+<script>
+  bootlint.showLintReportForCurrentDocument([]);
+</script>
+</body>
+</html>
